@@ -16,9 +16,6 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
     <link href="css/custom.css" rel="stylesheet" media="screen" />
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
-    
   <!-- アナリティクス ↓ --> 
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -30,38 +27,12 @@
   ga('send', 'pageview');
   </script>
   <!-- アナリティクス ↑--> 
-  
-  
-  <script language="javascript" type="text/javascript">
-      function OnButtonClick() {
-          target = document.getElementById("output");
-          
-          Push.create('こんにちは！', {
-              body: '更新をお知らせします！',
-              icon: 'icon.png',
-              timeout: 8000, // 通知が消えるタイミング
-              vibrate: [100, 100, 100], // モバイル端末でのバイブレーション秒数
-              onClick: function() {
-                  // 通知がクリックされた場合の設定
-                  console.log(this);
-              }
-          });          
-          var today = new Date();
-          window.alert('おわりし：' + today);
-          
-      }
-  </script>  
   </head>
   <body>
   <style id="accordion-style" type="text/css"></style>
   <div id="accordion"></div>
   <select class="form-control" id="select_group"></select>
   <select class="form-control" id="select_area"></select>
-  
-  <input type="button" value="push1" onclick="OnButtonClick();"/><br />
-  <br />
-  <div id="output"></div>  
-  
   <div class="accordion" id="accordion3">
     <div class="accordion-group-top">
     <!-- 追加↓ -->
