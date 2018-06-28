@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <title>5374.jpテスト版</title> 
+    <title>5374.jp 松江市版</title> 
     <meta property="og:title" content="5374.jp 松江市版" />
     <meta property="og:type" content="product" />
     <meta property="og:url" content="http://matsue.5374.jp/" />
@@ -16,31 +16,43 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
     <link href="css/custom.css" rel="stylesheet" media="screen" />
-  <!-- アナリティクス ↓ --> 
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-104551993-1', 'auto');
-  ga('send', 'pageview');
-  </script>
-  <!-- アナリティクス ↑--> 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
+    
+  <script language="javascript" type="text/javascript">
+     (function() {
+       if ("Notification" in window) {
+         var permission = Notification.permission;
+     
+         if (permission === "denied" || permission === "granted") {
+           return;
+         }
+     
+         Notification
+           .requestPermission()
+           .then(function() {
+             var notification = new Notification("Hello, world!");
+           });
+       }
+     })();
+  </script>  
   </head>
   <body>
   <style id="accordion-style" type="text/css"></style>
   <div id="accordion"></div>
   <select class="form-control" id="select_group"></select>
   <select class="form-control" id="select_area"></select>
+  
+  <input type="button" value="push1" onclick="OnButtonClick();"/><br />
+  <br />
+  <div id="output"></div>  
+  
   <div class="accordion" id="accordion3">
     <div class="accordion-group-top">
     <!-- 追加↓ -->
         <div class="accordion-inner">
           <!-- <h3>※2018年度版に修正中のため分別方法に誤りがある場合があります。<br>
           正しい分別方法は松江市のホームページをご確認ください。</h3><br>-->
-          
-          <h3>◇ テスト版 ◇</h3>   
           <h3>【本アプリについて】</h3>     
           本アプリはCode for Kanazawaが開発した『5374.jp』を、島根県松江市版に改版したものです。<br>
           <h3>【提供される情報について】</h3>
