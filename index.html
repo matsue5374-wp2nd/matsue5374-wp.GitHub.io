@@ -20,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
     
   <script language="javascript" type="text/javascript">
-     (function() {
+      function OnButtonClick() {
        if ("Notification" in window) {
          var permission = Notification.permission;
      
@@ -34,7 +34,7 @@
              var notification = new Notification("Hello, world!");
            });
        }
-     })();
+      }
   </script>  
   </head>
   <body>
