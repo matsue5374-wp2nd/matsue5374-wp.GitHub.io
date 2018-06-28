@@ -21,12 +21,17 @@
     
   <script language="javascript" type="text/javascript">
       function OnButtonClick() {
+       window.alert('はじまり');
        if ("Notification" in window) {
          var permission = Notification.permission;
      
          if (permission === "denied" || permission === "granted") {
+         
+           window.alert('失敗');
            return;
          }
+     
+         window.alert('成功');
      
          Notification
            .requestPermission()
